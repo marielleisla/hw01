@@ -58,7 +58,9 @@ builtins.trim = function(str) {
 
 builtins.search = function(sourceString, searchString) {
   if (searchString.indexOf(sourceString)) {
-    return true;
+    let i = sourceString.indexOf(searchString);
+    let test = sourceString.substring(i, i + searchString.length);
+    return test === searchString;;
   } else {
     return false;
   }
